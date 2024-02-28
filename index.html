@@ -45,8 +45,8 @@
                                     </div>
                                     <form class="user">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user"
-                                                id="inputNIM" placeholder="NIM">
+                                            <input type="email" class="form-control form-control-user"
+                                                id="inputEmail" placeholder="Email">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
@@ -85,17 +85,17 @@
     <!-- login href -->
     <script>
         function loginUser() {
-            var nim = document.getElementById('inputNIM').value;
+            var email = document.getElementById('inputEmail').value;
             var password = document.getElementById('exampleInputPassword').value;
 
-            if (nim === 'admin' && password === '123') {
+            if (nim === 'admin@uph.edu' && password === '123') {
                 window.location.href = 'home_admin.html';
-            } else if (nim === 'dosen' && password === '123') {
+            } else if (nim === 'dosen@uph.edu' && password === '123') {
                 window.location.href = 'home_dosen.html';
-            } else if (nim === 'mahasiswa' && password === '123') {
+            } else if (nim === 'mahasiswa@uph.edu' && password === '123') {
                 window.location.href = 'home_mhs.html';
             } else {
-                alert('Invalid nim or password. Please try again.');
+                alert('Invalid email or password. Please try again.');
             }
         }
     </script>
