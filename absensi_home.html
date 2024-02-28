@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Absensi UPH - Home</title>
+<style>
+  body {
+    background-color: #001C37;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left {
+    flex: 4;
+    text-align: center;
+  }
+
+  .right {
+    flex: 4;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .logo {
+    width: 250px;
+    height: auto;
+  }
+
+  .video-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 300px; 
+  }
+
+
+  .container .button-container {
+    flex: 1;
+    text-align: right;
+    margin-right: 50px; 
+    margin-top: -100px;
+  }
+
+  .container .button-container button {
+    background-color: white;
+    color: #001C37;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .container .button-container button:hover {
+    background-color: #ccc;
+  }
+
+  .container .button-container img {
+    width: 30px;
+  }
+
+  .button-container-center {
+    background-color: white;
+    width: 100px;
+    border-radius: 10px;
+    padding: 20px 50px 10px 50px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: auto;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .button-container-center img {
+    width: 100px;
+    border: none;
+  }
+
+  .button-container-center a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+  }
+
+  .button-container-center button {
+    background-color: white;
+    border-color: transparent;
+  }
+
+  .row {
+    column-count: 3;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="left">
+    <img src="img/Logo UPH White Text (Absensi).png" alt="Logo" class="logo">
+  </div>
+  <div class="right">
+    <h1>Informasi Mata Kuliah</h1>
+    <table>
+      <tr>
+        <th>Mata Kuliah</th>
+        <td>: </td>
+        <td>Studio Pengembangan Web</td>
+      </tr>
+      <tr>
+        <th>Jam</th>
+        <td>: </td>
+        <td>08.15 - 11.45</td>
+      </tr>
+      <tr>
+        <th>Ruang</th>
+        <td>: </td>
+        <td>B356</td>
+      </tr>
+      <tr>
+        <th>Nama Dosen</th>
+        <td>: </td>
+        <td>Arnold Aribowo, Kusno Prasetya</td>
+      </tr>
+      <tr>
+        <td><br></td>
+      </tr>
+      <tr>
+        <th>Nama Mahasiswa</th>
+        <td>: </td>
+        <td>Tom</td>
+      </tr>
+      <tr>
+        <th>Status Absensi</th>
+        <td>: </td>
+        <td>0 dari 2 berhasil</td>
+      </tr>
+    </table>  
+  </div>
+</div>
+
+<br>
+<div>
+  <H2 style="text-align: center;">Pesan: Silakan melakukan absensi</H2>
+</div>
+
+<br>
+<div class="row">
+  <div class="button-container-center">
+    <a href="absensi_wajah.html">
+        <button><img src="img/face_sensor.png"></button>
+        <h2>Wajah</h2>
+    </a>
+  </div>
+  <div class="button-container-center">
+    <a href="absensi_sidikjari.html">
+        <button><img src="img/fingerprint_sensor.png"></button>
+        <h2>Sidik Jari</h2>
+    </a>
+  </div>
+  <div class="button-container-center">
+    <a href="absensi_kartu.html">
+        <button><img src="img/card_sensor.png"></button>
+        <h2>Kartu</h2>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
+
