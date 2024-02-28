@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Absensi UPH</title>
+<style>
+  body {
+    background-color: #001C37;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .center {
+    flex: 4;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  .logo {
+    width: 250px;
+    height: auto;
+  }
+
+  .video-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 300px; 
+  }
+
+
+  .container .button-container {
+    flex: 1;
+    text-align: right;
+    margin-right: 50px; 
+    margin-top: -100px;
+  }
+
+  .container .button-container button {
+    background-color: white;
+    color: #001C37;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .container .button-container button:hover {
+    background-color: #ccc;
+  }
+
+  .container .button-container img {
+    width: 30px;
+  }
+
+  .button-container-center {
+    background-color: white;
+    width: 200px;
+    border-radius: 10px;
+    padding: 20px 50px 10px 50px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: auto;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .button-container-center img {
+    width: 100px;
+    border: none;
+  }
+
+  .button-container-center a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+  }
+
+  .button-container-center button {
+    background-color: white;
+    border-color: transparent;
+  }
+
+  .row {
+    column-count: 2;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="center">
+    <h1>Selamat datang di sistem</h1>
+    <div class="right">
+        <img src="img/Logo UPH White Text (Absensi).png" alt="Logo" class="logo">
+      </div>
+  </div>
+</div>
+
+<br>
+<div class="row">
+  <div class="button-container-center">
+    <a href="absensi_home.html">
+        <button>
+            <h2>Mulai Absensi</h2>
+        </button>
+    </a>
+  </div>
+  <div class="button-container-center">
+    <a href="index.html">
+        <button>
+            <h2>Histori Absensi</h2>
+        </button>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
+

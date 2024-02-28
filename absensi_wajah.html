@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Absensi UPH - Wajah</title>
+<style>
+  body {
+    background-color: #001C37;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left {
+    flex: 4;
+    text-align: center;
+  }
+
+  .right {
+    flex: 4;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .logo {
+    width: 250px;
+    height: auto;
+  }
+
+  .video-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 300px; 
+  }
+
+
+  .container .button-container {
+    flex: 1;
+    text-align: right;
+    margin-right: 50px; 
+    margin-top: -100px;
+  }
+
+  .container .button-container button {
+    background-color: white;
+    color: #001C37;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .container .button-container button:hover {
+    background-color: #ccc;
+  }
+
+  .container .button-container img {
+    width: 30px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="left">
+    <img src="img/Logo UPH White Text (Absensi).png" alt="Logo" class="logo">
+  </div>
+  <div class="right">
+    <h1>Informasi Mata Kuliah</h1>
+    <table>
+      <tr>
+        <th>Mata Kuliah</th>
+        <td>: </td>
+        <td>Studio Pengembangan Web</td>
+      </tr>
+      <tr>
+        <th>Jam</th>
+        <td>: </td>
+        <td>08.15 - 11.45</td>
+      </tr>
+      <tr>
+        <th>Ruang</th>
+        <td>: </td>
+        <td>B356</td>
+      </tr>
+      <tr>
+        <th>Nama Dosen</th>
+        <td>: </td>
+        <td>Arnold Aribowo, Kusno Prasetya</td>
+      </tr>
+      <tr>
+        <td><br></td>
+      </tr>
+      <tr>
+        <th>Nama Mahasiswa</th>
+        <td>: </td>
+        <td>Tom</td>
+      </tr>
+      <tr>
+        <th>Status Absensi</th>
+        <td>: </td>
+        <td>1 dari 2 berhasil</td>
+      </tr>
+    </table>
+  </div>
+  <div class="button-container">
+    <a href="absensi_home.html"><button><img src="img/arrow.png"></button></a>
+  </div>
+</div>
+
+<br>
+<div>
+  <H2 style="text-align: center;">Pesan: Silakan melakukan face recognition</H2>
+</div>
+
+<br><br><br><br><br>
+<div class="video-container">
+    <video autoplay="true" id="video-webcam">
+        Browsermu tidak mendukung!
+    </video>
+</div>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+    // seleksi elemen video
+    var video = document.querySelector("#video-webcam");
+
+    // minta izin user
+    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+    // jika user memberikan izin
+    if (navigator.getUserMedia) {
+        // jalankan fungsi handleVideo, dan videoError jika izin ditolak
+        navigator.getUserMedia({ video: true }, handleVideo, videoError);
+    }
+
+    // fungsi ini akan dieksekusi jika  izin telah diberikan
+    function handleVideo(stream) {
+        video.srcObject = stream;
+    }
+
+    // fungsi ini akan dieksekusi kalau user menolak izin
+    function videoError(e) {
+        // do something
+        alert("Izinkan menggunakan webcam untuk demo!")
+    }
+</script>
