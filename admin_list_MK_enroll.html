@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Blank</title>
+    <title>Enroll Mata Kuliah</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -89,6 +89,8 @@
                     <div class="py-2 collapse-inner rounded">
                         <a class="collapse-item active" href="admin_list_MK.html">List Mata Kuliah</a>
                         <a class="collapse-item" href="admin_tambah_MK.html">Tambah Mata Kuliah</a>
+                        <a class="collapse-item" href="admin_jadwal_MK.html">Jadwal Mata Kuliah</a>
+                        <a class="collapse-item" href="admin_ruang_MK.html">Ruang Kuliah</a>
                     </div>
                 </div>
             </li>
@@ -275,7 +277,6 @@
                                 <th>Kode MK</th>
                                 <th>Nama Mahasiswa</th>
                                 <th>NIM</th>
-                                <th>Semester</th>
                                 <th>Tahun Angkatan</th>
                                 <th>Aksi</th>
                             </tr>
@@ -285,7 +286,6 @@
                                 <td>SYS1</td>
                                 <td>Kelvin</td>
                                 <td>01081210011</td>
-                                <td>8</td>
                                 <td>2021</td>
                                 <td style="display: flex; gap: 5px;">                                
                                     <a class="btn btn-warning btn-sm" href="" style="width: 90px">Enroll</a>
@@ -295,7 +295,6 @@
                                 <td>SYS1</td>
                                 <td>Nathania Michaela</td>
                                 <td>01081210007</td>
-                                <td>8</td>
                                 <td>2021</td>
                                 <td style="display: flex; gap: 5px;">
                                     <a class="btn btn-warning btn-sm" href="" style="width: 90px">Enroll</a>
@@ -305,7 +304,6 @@
                                 <td>SYS1</td>
                                 <td>Yoana Sonia</td>
                                 <td>01081210001</td>
-                                <td>8</td>
                                 <td>2021</td>
                                 <td style="display: flex; gap: 5px;">
                                     <a class="btn btn-warning btn-sm" href="" style="width: 90px">Enroll</a>
@@ -315,7 +313,6 @@
                                 <td>SYS1</td>
                                 <td>Zian Carlos</td>
                                 <td>01081210013</td>
-                                <td>8</td>
                                 <td>2021</td>
                                 <td style="display: flex; gap: 5px;">
                                     <a class="btn btn-warning btn-sm" href="" style="width: 90px">Enroll</a>
@@ -387,7 +384,6 @@
                 { data: 'kode_MK' },
                 { data: 'nama_mahasiswa' },
                 { data: 'nim' },
-                { data: 'semester' },
                 { data: 'angakatan' },
                 { data: 'aksi' }
             ]
