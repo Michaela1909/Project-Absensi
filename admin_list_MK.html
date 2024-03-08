@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Blank</title>
+    <title>List Mata Kuliah</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -89,6 +89,8 @@
                     <div class="py-2 collapse-inner rounded">
                         <a class="collapse-item active" href="admin_list_MK.html">List Mata Kuliah</a>
                         <a class="collapse-item" href="admin_tambah_MK.html">Tambah Mata Kuliah</a>
+                        <a class="collapse-item" href="admin_jadwal_MK.html">Jadwal Mata Kuliah</a>
+                        <a class="collapse-item" href="admin_ruang_MK.html">Ruang Kuliah</a>
                     </div>
                 </div>
             </li>
@@ -274,12 +276,6 @@
                             <div class="card-body">
                                 <form>
                                     <div class="form-group row">
-                                        <label for="inputSemester" class=" col-xl-4 col-form-label">Semester</label>
-                                        <div class="col-xl-8">
-                                            <input type="text" class="form-control" id="inputSemester">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
                                         <label for="inputAngkatan" class="col-xl-4 col-form-label">Tahun Angkatan</label>
                                         <div class="col-xl-8">
                                             <input type="text" class="form-control" id="inputAngkatan">
@@ -298,25 +294,23 @@
                     <table id="example" class="display cell-border " style="width:100%">
                         <thead>
                             <tr>
-                                <th>Tanggal</th>
+                                <th>Tanggal Mulai</th>
+                                <th>Tanggal Selesai</th>
+                                <th>Kode Mata Kuliah</th>
                                 <th>Mata Kuliah</th>
                                 <th>Tahun Angkatan</th>
-                                <th>Nama Dosen</th>
                                 <th>Ruang</th>
-                                <th>Jam Mulai</th>
-                                <th>Jam Selesai</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>2024-02-02 s/d 2024-04-30</td>
+                                <td>2024-02-02</td>
+                                <td>2024-04-30</td>
+                                <td>SYS1</td>
                                 <td>Struktur Data</td>
-                                <td>8</td>
-                                <td>Kusno Prasetya</td>
+                                <td>2021</td>
                                 <td>B342</td>
-                                <td>08.15</td>
-                                <td>11.45</td>
                                 <td style="display: flex; gap: 5px;">
                                     <a class="btn btn-success btn-sm" href="admin_list_MK_detail.html" style="width: 90px">Detail</a>
                                     <a class="btn btn-primary btn-sm" href="admin_list_MK_edit.html" style="width: 90px">Edit</a>
@@ -325,13 +319,12 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>2024-02-02 s/d 2024-04-30</td>
-                                <td>Struktur Data</td>
-                                <td>8</td>
-                                <td>Kusno Prasetya</td>
+                                <td>2024-02-02</td>
+                                <td>2024-04-30</td>
+                                <td>SYS2</td>
+                                <td>Sistem Basis Data</td>
+                                <td>2021</td>
                                 <td>B342</td>
-                                <td>08.15</td>
-                                <td>11.45</td>
                                 <td style="display: flex; gap: 5px;">
                                     <a class="btn btn-success btn-sm" href="" style="width: 90px">Detail</a>
                                     <a class="btn btn-primary btn-sm" href="" style="width: 90px">Edit</a>
@@ -340,28 +333,12 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>2024-02-02 s/d 2024-04-30</td>
-                                <td>Struktur Data</td>
-                                <td>8</td>
-                                <td>Kusno Prasetya</td>
-                                <td>B342</td>
-                                <td>08.15</td>
-                                <td>11.45</td>
-                                <td style="display: flex; gap: 5px;">
-                                    <a class="btn btn-success btn-sm" href="" style="width: 90px">Detail</a>
-                                    <a class="btn btn-primary btn-sm" href="" style="width: 90px">Edit</a>
-                                    <a class="btn btn-danger btn-sm" href="" style="width: 90px">Non Aktif</a>
-                                    <a class="btn btn-warning btn-sm" href="" style="width: 90px">Enroll</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2024-02-02 s/d 2024-04-30</td>
-                                <td>Struktur Data</td>
-                                <td>8</td>
-                                <td>Kusno Prasetya</td>
-                                <td>B342</td>
-                                <td>08.15</td>
-                                <td>11.45</td>
+                                <td>2024-02-02</td>
+                                <td>2024-04-30</td>
+                                <td>SYS3</td>
+                                <td>Teknologi Web</td>
+                                <td>2021</td>
+                                <td>B356</td>
                                 <td style="display: flex; gap: 5px;">
                                     <a class="btn btn-success btn-sm" href="" style="width: 90px">Detail</a>
                                     <a class="btn btn-primary btn-sm" href="" style="width: 90px">Edit</a>
@@ -432,13 +409,12 @@
     <script>
         new DataTable('#example', {
             columns: [
-                { data: 'tanggal' },
+                { data: 'tanggal_mulai' },
+                { data: 'tanggal_selesai' },
+                { data: 'kode_mata_kuliah' },
                 { data: 'mata_kuliah' },
                 { data: 'tahun_angkatan' },
-                { data: 'nama_dosen' },
                 { data: 'ruang' },
-                { data: 'jam_mulai' },
-                { data: 'jam_selesai' },
                 { data: 'aksi' },
             ]
         });
